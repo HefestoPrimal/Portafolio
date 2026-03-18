@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba buena</title>
+</head>
+<body>
+    <h1>Buenas buenas</h1>
+    <p>Esto es una prueba en dónde si este mensaje aparece todo salió bien.</p>
+    <button id="miBoton">Puchame</button>
+
+    <!-- Contenedor donde aparecerá el mensaje -->
+    <div id="mensaje" role="status" aria-live="polite" style="margin-top:20px; font-size:1.2em; color:#007bff;"></div>
+</body>
+
+<style>
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.6em;
+        line-height: 1.6;
+    }
+
+    h1 {
+        color: #333;
+        font-size: 2.4em;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.4em;
+        transition: background-color 0.3s ease;
+        outline: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+</style>
+
+<script>
+    // Código para que al presionar el botón salga un texto que diga "Buenas buenas!!!"
+    document.addEventListener('DOMContentLoaded', function () {
+        const boton = document.getElementById('miBoton');
+        const contenedor = document.getElementById('mensaje');
+
+        boton.addEventListener('click', function () {
+            contenedor.textContent = 'Buenas buenas!!!';
+            // Opcional: animación breve
+            contenedor.style.opacity = '0';
+            contenedor.style.transition = 'opacity 0.3s ease';
+            requestAnimationFrame(() => { contenedor.style.opacity = '1'; });
+        });
+    });
+</script>
+
+</html>
