@@ -1,40 +1,24 @@
 [
   {
-    "name": "proyecto1",
-    "titulo": "Activador de Cargas I2C UART",
+    "name": "Activador de Cargas por I2C UART",
+    "images": [],
+    "videos": [],
+    "titulo": "Activador de Cargas por I2C UART",
     "descripcion": "Este dispositivo permite controlar cargas por medio de la comunicación de 2 cables (I2C/UART) con ayuda de un ATtiny85 que funciona como interprete de las señales hacia un registro de corrimiento con 8 salidas digitales preparadas para activarse de forma individual según las instrucciones recibidas",
     "tecnologias": "ATtiny85, Arduino IDE, I2C, UART, C++, Electrónica, PCB",
-    "fecha": "09/11/2025",
+    "fecha": "09/11/25",
     "repositorio": "github.com/HefestoPrimal/ActivadorCargas_I2C-UART",
-    "demo": "youtube.com/watch?v=D0Lzn7mIA10",
-    "images": [
-      "projects/Activador de Cargas por I2C UART/imgs/Circuito activador de cargas por I2C o UART.jpeg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART PCB.jpeg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 3.jpg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 2.jpg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 1.jpg",
-      "projects/Activador de Cargas por I2C UART/vids/SimulacionATtiny85_74HC595.gif"
-    ],
-    "videos": [
-    ]
+    "demo": "youtube.com/watch?v=D0Lzn7mIA10"
   },
-
   {
-    "name": "proyecto2",
-    "titulo": "Luz FF",
-    "descripcion": "ESP32 con un RTC integrado en la PCB para crear eventos encendiendo o apagando la luz o la carga que este conectada a los relés, cuenta con 3 botones o pines para una entrada digital y accionar directamente las cargas, tiene también conexión a internet con comunicación a un servidor para ver el historial de actividades y programar acciones desde un dashboard. También cuenta con una interfaz html propia para acceder a ella a través de un AP.",
-    "tecnologias": "ESP32, Platformio IDE, I2C, C++, Electrónica, PCB, HTML, JS, CSS",
-    "fecha": "18/03/2025",
-    "repositorio": "github.com/HefestoPrimal/Luz-FF",
-    "demo": "youtube.com/@mexatronica99",
-    "images": [
-      "projects/Luz FF/imgs/Luz FF Esquematico.jpeg",
-      "projects/Luz FF/imgs/Luz FF 3D 1.jpg",
-      "projects/Luz FF/imgs/Luz FF 3D 2.jpg",
-      "projects/Luz FF/imgs/Luz FF 3D 3.jpg",
-      "projects/Luz FF/imgs/Luz FF PCB.jpeg"
-    ],
-    "videos": [
-    ]
+    "name": "Luz FF",
+    "images": [],
+    "videos": [],
+    "titulo": "Nuevo Proyecto",
+    "descripcion": "Est descripción genérica solo sirve de ejemplo para los siguientes proyectos que se pueden agregar al portafolio",
+    "tecnologias": "Cerebro, Libreta, Lapiz, Goma, Sacapuntas, Pluma",
+    "fecha": "27/01/00",
+    "repositorio": "github.com/HefestoPrimal",
+    "demo": "www.youtube.com/@mexatronica99"
   }
 ]
