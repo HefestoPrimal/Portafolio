@@ -1,6 +1,6 @@
-titulo: Nuevo Proyecto
-descripcion: Est descripción genérica solo sirve de ejemplo para los siguientes proyectos que se pueden agregar al portafolio
-tecnologias: Cerebro, Libreta, Lapiz, Goma, Sacapuntas, Pluma
-fecha: 27/01/00
-repositorio: github.com/HefestoPrimal
-demo: www.youtube.com/@mexatronica99
+titulo: Luz FF
+descripcion: ESP32 con un RTC integrado en la PCB para crear eventos encendiendo o apagando la luz o la carga que este conectada a los relés, cuenta con 3 botones o pines para una entrada digital y accionar directamente las cargas, tiene también conexión a internet con comunicación a un servidor para ver el historial de actividades y programar acciones desde un dashboard. También cuenta con una interfaz html propia para acceder a ella a través de un AP.
+tecnologias: ESP32, Platformio, C++, Electrónica, Domótica, I2C, PCB, Python, HTML, CSS, JS
+fecha: 16/03/2026
+repositorio: https://www.github.com/HefestoPrimal/Luz-FF
+demo: https://www.youtube.com/@mexatronica99

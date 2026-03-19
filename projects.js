@@ -56,8 +56,8 @@ function renderProject(project) {
             <p>${project.descripcion || 'Sin descripción'}</p>
             ${project.tecnologias ? `<p><strong>Tecnologías:</strong> ${project.tecnologias}</p>` : ''}
             ${project.fecha ? `<p><strong>Fecha:</strong> ${project.fecha}</p>` : ''}
-            ${project.repositorio ? `<p><a href="${project.repositorio}" target="_blank">Repositorio</a></p>` : ''}
-            ${project.demo ? `<p><a href="${project.demo}" target="_blank">Demostración</a></p>` : ''}
+            ${project.repositorio ? `<p><a href="${project.repositorio}" target="_blank" rel="noopener noreferrer">Repositorio</a></p>` : ''}
+            ${project.demo ? `<p><a href="${project.demo}" target="_blank" rel="noopener noreferrer">Demostración</a></p>` : ''}
             
             ${imagesHTML || videosHTML ? `
                 <div class="media-gallery">

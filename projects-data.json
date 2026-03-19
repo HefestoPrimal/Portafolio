@@ -1,40 +1,50 @@
 [
   {
-    "name": "proyecto1",
-    "titulo": "Activador de Cargas I2C UART",
+    "name": "Nuevo Proyecto",
+    "titulo": "Nuevo Proyecto",
+    "descripcion": "Esta descripción genérica solo sirve de ejemplo para los siguientes proyectos que se pueden agregar al portafolio",
+    "tecnologias": "Cerebro, Libreta, Lapiz, Goma, Sacapuntas, Pluma",
+    "fecha": "27/01/2000",
+    "repositorio": "https://www.github.com/HefestoPrimal",
+    "demo": "https://www.youtube.com/@mexatronica99",
+    "images": [],
+    "videos": []
+  },
+  {
+    "name": "Activador de Cargas por I2C UART",
+    "titulo": "Activador de Cargas por I2C UART",
     "descripcion": "Este dispositivo permite controlar cargas por medio de la comunicación de 2 cables (I2C/UART) con ayuda de un ATtiny85 que funciona como interprete de las señales hacia un registro de corrimiento con 8 salidas digitales preparadas para activarse de forma individual según las instrucciones recibidas",
     "tecnologias": "ATtiny85, Arduino IDE, I2C, UART, C++, Electrónica, PCB",
     "fecha": "09/11/2025",
-    "repositorio": "github.com/HefestoPrimal/ActivadorCargas_I2C-UART",
-    "demo": "youtube.com/watch?v=D0Lzn7mIA10",
+    "repositorio": "https://www.github.com/HefestoPrimal/ActivadorCargas_I2C-UART",
+    "demo": "https://www.youtube.com/watch?v=D0Lzn7mIA10",
     "images": [
-      "projects/Activador de Cargas por I2C UART/imgs/Circuito activador de cargas por I2C o UART.jpeg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART PCB.jpeg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 3.jpg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 2.jpg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 1.jpg",
-      "projects/Activador de Cargas por I2C UART/vids/SimulacionATtiny85_74HC595.gif"
+      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_PCB.jpeg",
+      "/projects/Activador de Cargas por I2C UART/imgs/SimulacionATtiny85_74HC595.gif",
+      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_1.jpg",
+      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_2.jpg",
+      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_3.jpg",
+      "/projects/Activador de Cargas por I2C UART/imgs/CircuitoActivadorCargasI2C-UART.jpeg"
     ],
     "videos": [
+      "/projects/Activador de Cargas por I2C UART/vids/PCB 595.mp4"
     ]
   },
-
   {
-    "name": "proyecto2",
+    "name": "Luz FF",
     "titulo": "Luz FF",
     "descripcion": "ESP32 con un RTC integrado en la PCB para crear eventos encendiendo o apagando la luz o la carga que este conectada a los relés, cuenta con 3 botones o pines para una entrada digital y accionar directamente las cargas, tiene también conexión a internet con comunicación a un servidor para ver el historial de actividades y programar acciones desde un dashboard. También cuenta con una interfaz html propia para acceder a ella a través de un AP.",
-    "tecnologias": "ESP32, Platformio IDE, I2C, C++, Electrónica, PCB, HTML, JS, CSS",
-    "fecha": "18/03/2025",
-    "repositorio": "github.com/HefestoPrimal/Luz-FF",
-    "demo": "youtube.com/@mexatronica99",
+    "tecnologias": "ESP32, Platformio, C++, Electrónica, Domótica, I2C, PCB, Python, HTML, CSS, JS",
+    "fecha": "16/03/2026",
+    "repositorio": "https://www.github.com/HefestoPrimal/Luz-FF",
+    "demo": "https://www.youtube.com/@mexatronica99",
     "images": [
-      "projects/Luz FF/imgs/Luz FF Esquematico.jpeg",
-      "projects/Luz FF/imgs/Luz FF 3D 1.jpg",
-      "projects/Luz FF/imgs/Luz FF 3D 2.jpg",
-      "projects/Luz FF/imgs/Luz FF 3D 3.jpg",
-      "projects/Luz FF/imgs/Luz FF PCB.jpeg"
+      "/projects/Luz FF/imgs/LuzFF_3D_3.jpg",
+      "/projects/Luz FF/imgs/LuzFF_PCB.jpeg",
+      "/projects/Luz FF/imgs/LuzFF_3D_1.jpg",
+      "/projects/Luz FF/imgs/LuzFF_3D_2.jpg",
+      "/projects/Luz FF/imgs/LuzFF_Esquematico.jpeg"
     ],
-    "videos": [
-    ]
+    "videos": []
   }
 ]

@@ -13,66 +13,77 @@ const VIDEO_EXTENSIONS = ['.mp4', '.webm', '.ogg', '.mov'];
 function buildProjectsData() {
     console.log('🔍 Escaneando carpetas de proyectos...');
     
-    // Verificar si la carpeta projects existe
     if (!fs.existsSync(projectsDir)) {
         console.error('❌ La carpeta "projects" no existe');
         return;
     }
     
     const projects = [];
-    
-    // Leer todas las carpetas en projects/
     const items = fs.readdirSync(projectsDir);
     
     items.forEach(item => {
         const projectPath = path.join(projectsDir, item);
         
-        // Solo procesar carpetas
         if (fs.statSync(projectPath).isDirectory()) {
             console.log(`📁 Procesando proyecto: ${item}`);
-            
             const project = processProject(item, projectPath);
             if (project) {
                 projects.push(project);
                 console.log(`   ✅ Proyecto agregado: ${project.titulo || item}`);
+                console.log(`      📸 Imágenes encontradas: ${project.images.length}`);
+                console.log(`      🎥 Videos encontrados: ${project.videos.length}`);
             }
         }
     });
     
-    // Guardar el archivo JSON
     fs.writeFileSync(outputFile, JSON.stringify(projects, null, 2));
     console.log(`\n✅ Archivo ${outputFile} generado con ${projects.length} proyectos`);
 }
 
 function processProject(folderName, projectPath) {
     try {
-        // Leer info.txt si existe
-        const infoPath = path.join(projectPath, 'info.txt');
+        // Inicializar proyecto con arrays vacíos
         let projectInfo = {
             name: folderName,
+            titulo: folderName, // Valor por defecto
+            descripcion: '',
+            tecnologias: '',
+            fecha: '',
+            repositorio: '',
+            demo: '',
             images: [],
             videos: []
         };
         
+        // Leer info.txt si existe
+        const infoPath = path.join(projectPath, 'info.txt');
         if (fs.existsSync(infoPath)) {
             const infoContent = fs.readFileSync(infoPath, 'utf8');
-            projectInfo = { ...projectInfo, ...parseInfoFile(infoContent) };
+            const parsedInfo = parseInfoFile(infoContent);
+            // Combinar la información manteniendo los arrays de imágenes y videos
+            projectInfo = { ...projectInfo, ...parsedInfo, images: [], videos: [] };
         } else {
             console.log(`   ⚠️  No se encontró info.txt para ${folderName}`);
         }
         
-        // Buscar imágenes
-        const imagesDir = path.join(projectPath, 'imagenes');
+        // Buscar imágenes - CORREGIDO: Asignar directamente al array
+        const imagesDir = path.join(projectPath, 'imgs');
         if (fs.existsSync(imagesDir)) {
-            projectInfo.images = getFilesFromFolder(imagesDir, IMAGE_EXTENSIONS)
-                .map(file => `/projects/${folderName}/imagenes/${file}`);
+            const imageFiles = getFilesFromFolder(imagesDir, IMAGE_EXTENSIONS);
+            projectInfo.images = imageFiles.map(file => 
+                `/projects/${folderName}/imgs/${file}`
+            );
+            console.log(`      📸 Archivos de imagen encontrados:`, imageFiles);
         }
         
-        // Buscar videos
-        const videosDir = path.join(projectPath, 'videos');
+        // Buscar videos - CORREGIDO: Asignar directamente al array
+        const videosDir = path.join(projectPath, 'vids');
         if (fs.existsSync(videosDir)) {
-            projectInfo.videos = getFilesFromFolder(videosDir, VIDEO_EXTENSIONS)
-                .map(file => `/projects/${folderName}/videos/${file}`);
+            const videoFiles = getFilesFromFolder(videosDir, VIDEO_EXTENSIONS);
+            projectInfo.videos = videoFiles.map(file => 
+                `/projects/${folderName}/vids/${file}`
+            );
+            console.log(`      🎥 Archivos de video encontrados:`, videoFiles);
         }
         
         return projectInfo;
@@ -87,10 +98,8 @@ function parseInfoFile(content) {
     const info = {};
     
     content.split('\n').forEach(line => {
-        // Ignorar líneas vacías
         if (!line.trim()) return;
         
-        // Buscar el primer ":" para separar clave y valor
         const colonIndex = line.indexOf(':');
         if (colonIndex > 0) {
             const key = line.substring(0, colonIndex).trim();
@@ -115,6 +124,5 @@ function getFilesFromFolder(folderPath, extensions) {
         });
 }
 
-// Ejecutar el script
 console.log('🚀 Iniciando generación del portafolio...\n');
 buildProjectsData();
