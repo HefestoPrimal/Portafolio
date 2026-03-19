@@ -1,0 +1,6 @@
+titulo: Activador de Cargas por I2C UART
+descripcion: Este dispositivo permite controlar cargas por medio de la comunicación de 2 cables (I2C/UART) con ayuda de un ATtiny85 que funciona como interprete de las señales hacia un registro de corrimiento con 8 salidas digitales preparadas para activarse de forma individual según las instrucciones recibidas
+tecnologias: ATtiny85, Arduino IDE, I2C, UART, C++, Electrónica, PCB
+fecha: 09/11/25
+repositorio: github.com/HefestoPrimal/ActivadorCargas_I2C-UART
+demo: youtube.com/watch?v=D0Lzn7mIA10

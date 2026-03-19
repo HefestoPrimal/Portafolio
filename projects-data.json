@@ -22,18 +22,17 @@
   {
     "name": "proyecto2",
     "titulo": "Luz FF",
-    "descripcion": "Este dispositivo permite controlar cargas por medio de la comunicación de 2 cables (I2C/UART) con ayuda de un ATtiny85 que funciona como interprete de las señales hacia un registro de corrimiento con 8 salidas digitales preparadas para activarse de forma individual según las instrucciones recibidas",
-    "tecnologias": "ATtiny85, Arduino IDE, I2C, UART, C++, Electrónica, PCB",
-    "fecha": "2025-11-09",
-    "github": "github.com/HefestoPrimal/ActivadorCargas_I2C-UART",
-    "demo": "youtube.com/watch?v=D0Lzn7mIA10",
+    "descripcion": "ESP32 con un RTC integrado en la PCB para crear eventos encendiendo o apagando la luz o la carga que este conectada a los relés, cuenta con 3 botones o pines para una entrada digital y accionar directamente las cargas, tiene también conexión a internet con comunicación a un servidor para ver el historial de actividades y programar acciones desde un dashboard. También cuenta con una interfaz html propia para acceder a ella a través de un AP.",
+    "tecnologias": "ESP32, Platformio IDE, I2C, C++, Electrónica, PCB, HTML, JS, CSS",
+    "fecha": "2026-03-18",
+    "github": "github.com/HefestoPrimal/Luz-FF",
+    "demo": "youtube.com/@mexatronica99",
     "images": [
-      "projects/Activador de Cargas por I2C UART/imgs/Circuito activador de cargas por I2C o UART.jpeg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART PCB.jpeg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 3.jpg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 2.jpg",
-      "projects/Activador de Cargas por I2C UART/imgs/Activador de cargas por I2C-UART 1.jpg",
-      "projects/Activador de Cargas por I2C UART/vids/SimulacionATtiny85_74HC595.gif"
+      "projects/Luz FF/imgs/Luz FF Esquematico.jpeg",
+      "projects/Luz FF/imgs/Luz FF 3D 1.jpg",
+      "projects/Luz FF/imgs/Luz FF 3D 1.jpg",
+      "projects/Luz FF/imgs/Luz FF 3D 1.jpg",
+      "projects/Luz FF/imgs/Luz FF PCB.jpeg"
     ],
     "videos": [
     ]

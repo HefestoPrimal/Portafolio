@@ -1,0 +1,6 @@
+titulo: Nuevo Proyecto
+descripcion: Est descripción genérica solo sirve de ejemplo para los siguientes proyectos que se pueden agregar al portafolio
+tecnologias: Cerebro, Libreta, Lapiz, Goma, Sacapuntas, Pluma
+fecha: 27/01/00
+repositorio: github.com/HefestoPrimal
+demo: www.youtube.com/@mexatronica99
