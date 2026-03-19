@@ -1,0 +1,61 @@
+# .github/workflows/generate-portfolio.yml
+
+name: Generar Portafolio Automáticamente
+
+# Cuando se ejecutará este workflow
+on:
+    # Se ejecutar cuando hay un push a ña rama master
+    push:
+        branches: [ master ]
+        # Solo se ejecuta si hay cambios en la carpeta projects
+        paths: 
+            - 'projects/**'
+
+        # También se puede ejecutar manualmente desde GitHub
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    generate-portfolio:
+        runs-on: ubuntu-latest
+
+        steps:
+            # Paso 1 descargar el código del repositorio
+            - name: Clonar repositorio
+              uses: actions/checkout@v3
+              with:
+                fetch-depth: 0 # Obtener todo el historial
+
+            # Paso 2: Configurar Node.js
+            - name: Configurar Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18'
+
+            # Paso 3: Ejecutar el script de generación
+            - name: Generar projects-data.json
+              run: node build.js
+
+            # Paso 4: Verificar si hubo cambios
+            - name: Verificar cambios
+              id: verify-changes
+              run: |
+                if git diff --quiet projects-data.json; then
+                  echo "No hay cambios en projects-data.json"
+                  echo "changed=false" >> $GITHUB_OUTPUT
+                else
+                  echo "Se detectaron cambios en projects-data.json"
+                  echo "changed=true" >> $GITHUB_OUTPUT
+                fi
+
+            # Paso 5: hacer commit si hay cambios
+            - name: Hacer commit de los cambios
+              if: steps.verify-changes.outputs.changed == 'true'
+              run: |
+                git config --global user.name 'github-actions[bot]'
+                git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+                git add projects-data.json
+                git commit -m "[v/] Actualización automática: projects-data.json"
+                git push

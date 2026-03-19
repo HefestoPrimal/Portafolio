@@ -3,3 +3,5 @@
 estiloViejo.css
 indexPrototipo.html
 projects/Nuevo Proyecto/
+node_modules/
+.DS_Store
