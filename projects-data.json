@@ -1,6 +1,5 @@
 [
   {
-<<<<<<< HEAD
     "name": "Nuevo Proyecto",
     "titulo": "Nuevo Proyecto",
     "descripcion": "Esta descripción genérica solo sirve de ejemplo para los siguientes proyectos que se pueden agregar al portafolio",
@@ -20,16 +19,14 @@
     "repositorio": "https://www.github.com/HefestoPrimal/ActivadorCargas_I2C-UART",
     "demo": "https://www.youtube.com/watch?v=D0Lzn7mIA10",
     "images": [
-      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_PCB.jpeg",
-      "/projects/Activador de Cargas por I2C UART/imgs/SimulacionATtiny85_74HC595.gif",
-      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_1.jpg",
-      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_2.jpg",
-      "/projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_3.jpg",
-      "/projects/Activador de Cargas por I2C UART/imgs/CircuitoActivadorCargasI2C-UART.jpeg"
+      "projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_PCB.jpeg",
+      "projects/Activador de Cargas por I2C UART/imgs/SimulacionATtiny85_74HC595.gif",
+      "projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_1.jpg",
+      "projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_2.jpg",
+      "projects/Activador de Cargas por I2C UART/imgs/ActivadorCargasI2C-UART_3.jpg",
+      "projects/Activador de Cargas por I2C UART/imgs/CircuitoActivadorCargasI2C-UART.jpeg"
     ],
-    "videos": [
-      "/projects/Activador de Cargas por I2C UART/vids/PCB 595.mp4"
-    ]
+    "videos": []
   },
   {
     "name": "Luz FF",
@@ -40,34 +37,12 @@
     "repositorio": "https://www.github.com/HefestoPrimal/Luz-FF",
     "demo": "https://www.youtube.com/@mexatronica99",
     "images": [
-      "/projects/Luz FF/imgs/LuzFF_3D_3.jpg",
-      "/projects/Luz FF/imgs/LuzFF_PCB.jpeg",
-      "/projects/Luz FF/imgs/LuzFF_3D_1.jpg",
-      "/projects/Luz FF/imgs/LuzFF_3D_2.jpg",
-      "/projects/Luz FF/imgs/LuzFF_Esquematico.jpeg"
+      "projects/Luz FF/imgs/LuzFF_3D_3.jpg",
+      "projects/Luz FF/imgs/LuzFF_PCB.jpeg",
+      "projects/Luz FF/imgs/LuzFF_3D_1.jpg",
+      "projects/Luz FF/imgs/LuzFF_3D_2.jpg",
+      "projects/Luz FF/imgs/LuzFF_Esquematico.jpeg"
     ],
     "videos": []
-=======
-    "name": "Activador de Cargas por I2C UART",
-    "images": [],
-    "videos": [],
-    "titulo": "Activador de Cargas por I2C UART",
-    "descripcion": "Este dispositivo permite controlar cargas por medio de la comunicación de 2 cables (I2C/UART) con ayuda de un ATtiny85 que funciona como interprete de las señales hacia un registro de corrimiento con 8 salidas digitales preparadas para activarse de forma individual según las instrucciones recibidas",
-    "tecnologias": "ATtiny85, Arduino IDE, I2C, UART, C++, Electrónica, PCB",
-    "fecha": "09/11/25",
-    "repositorio": "github.com/HefestoPrimal/ActivadorCargas_I2C-UART",
-    "demo": "youtube.com/watch?v=D0Lzn7mIA10"
-  },
-  {
-    "name": "Luz FF",
-    "images": [],
-    "videos": [],
-    "titulo": "Nuevo Proyecto",
-    "descripcion": "Est descripción genérica solo sirve de ejemplo para los siguientes proyectos que se pueden agregar al portafolio",
-    "tecnologias": "Cerebro, Libreta, Lapiz, Goma, Sacapuntas, Pluma",
-    "fecha": "27/01/00",
-    "repositorio": "github.com/HefestoPrimal",
-    "demo": "www.youtube.com/@mexatronica99"
->>>>>>> 11696579e4dd1c1d4042f18ad720d57e7d26450b
   }
 ]

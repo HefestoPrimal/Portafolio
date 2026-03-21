@@ -71,7 +71,7 @@ function processProject(folderName, projectPath) {
         if (fs.existsSync(imagesDir)) {
             const imageFiles = getFilesFromFolder(imagesDir, IMAGE_EXTENSIONS);
             projectInfo.images = imageFiles.map(file => 
-                `/projects/${folderName}/imgs/${file}`
+                `projects/${folderName}/imgs/${file}`
             );
             console.log(`      📸 Archivos de imagen encontrados:`, imageFiles);
         }
@@ -81,7 +81,7 @@ function processProject(folderName, projectPath) {
         if (fs.existsSync(videosDir)) {
             const videoFiles = getFilesFromFolder(videosDir, VIDEO_EXTENSIONS);
             projectInfo.videos = videoFiles.map(file => 
-                `/projects/${folderName}/vids/${file}`
+                `projects/${folderName}/vids/${file}`
             );
             console.log(`      🎥 Archivos de video encontrados:`, videoFiles);
         }
